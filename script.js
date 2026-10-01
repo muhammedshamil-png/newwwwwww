@@ -1,154 +1,229 @@
-// =================================
-// FARMHOUSE WEBSITE JAVASCRIPT
-// =================================
+// ============================================
+// KOZHIKODE CORPORATION FLEET SYSTEM
+// ============================================
 
 
-// NAVBAR SCROLL EFFECT
+// ===============================
+// ADD VEHICLE MODAL
+// ===============================
 
-const navbar = document.querySelector(".navbar");
+const vehicleModal =
+    document.getElementById("vehicleModal");
 
-window.addEventListener("scroll", function () {
+function openVehicleModal() {
 
-    if (window.scrollY > 50) {
+    vehicleModal.classList.add("show");
 
-        navbar.classList.add("scrolled");
+}
 
-    } else {
+function closeVehicleModal() {
 
-        navbar.classList.remove("scrolled");
+    vehicleModal.classList.remove("show");
+
+}
+
+
+// ===============================
+// VEHICLE DETAILS
+// ===============================
+
+const detailsModal =
+    document.getElementById("detailsModal");
+
+const detailRegistration =
+    document.getElementById("detailRegistration");
+
+
+function showVehicle(registration) {
+
+    detailRegistration.textContent =
+        registration;
+
+    detailsModal.classList.add("show");
+
+}
+
+
+function closeDetails() {
+
+    detailsModal.classList.remove("show");
+
+}
+
+
+// ===============================
+// CLOSE MODALS WHEN CLICKING
+// OUTSIDE
+// ===============================
+
+window.addEventListener("click", function(event) {
+
+    if (event.target === vehicleModal) {
+
+        closeVehicleModal();
+
+    }
+
+    if (event.target === detailsModal) {
+
+        closeDetails();
 
     }
 
 });
 
 
-// =================================
-// SMOOTH NAVIGATION
-// =================================
+// ===============================
+// ADD VEHICLE
+// ===============================
 
-const navigationLinks =
-    document.querySelectorAll('a[href^="#"]');
+const vehicleForm =
+    document.getElementById("vehicleForm");
 
-navigationLinks.forEach(function (link) {
+vehicleForm.addEventListener(
+    "submit",
+    function(event) {
 
-    link.addEventListener("click", function (event) {
+        event.preventDefault();
 
-        const targetId =
-            this.getAttribute("href");
+        const vehicleName =
+            document.getElementById("vehicleName").value;
 
-        const target =
-            document.querySelector(targetId);
+        const registration =
+            document.getElementById("registration").value;
 
-        if (target) {
 
-            event.preventDefault();
+        alert(
+            vehicleName +
+            " (" +
+            registration +
+            ") has been added successfully."
+        );
 
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
 
-        }
+        vehicleForm.reset();
+
+        closeVehicleModal();
+
+    }
+);
+
+
+// ===============================
+// SEARCH VEHICLES
+// ===============================
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const vehicleRows =
+    document.querySelectorAll(".vehicle-row");
+
+
+searchInput.addEventListener(
+    "input",
+    function() {
+
+        const searchValue =
+            searchInput.value.toLowerCase();
+
+
+        vehicleRows.forEach(function(row) {
+
+            const searchData =
+                row.dataset.search.toLowerCase();
+
+
+            if (searchData.includes(searchValue)) {
+
+                row.style.display = "grid";
+
+            } else {
+
+                row.style.display = "none";
+
+            }
+
+        });
+
+    }
+);
+
+
+// ===============================
+// FILTER BUTTONS
+// ===============================
+
+const filterButtons =
+    document.querySelectorAll(".filter");
+
+
+filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        filterButtons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
 
     });
 
 });
 
 
-// =================================
-// SCROLL REVEAL
-// =================================
+// ===============================
+// DETAIL TABS
+// ===============================
 
-const revealElements = document.querySelectorAll(
-    ".about-image, .about-content, .facility-card, .gallery-grid img, .booking-container"
-);
+const tabs =
+    document.querySelectorAll(".tab");
 
-const observer = new IntersectionObserver(
-    function (entries) {
 
-        entries.forEach(function (entry) {
+tabs.forEach(function(tab) {
 
-            if (entry.isIntersecting) {
+    tab.addEventListener("click", function() {
 
-                entry.target.classList.add("reveal");
+        tabs.forEach(function(item) {
 
-                setTimeout(function () {
-
-                    entry.target.classList.add("active");
-
-                }, 50);
-
-                observer.unobserve(entry.target);
-
-            }
+            item.classList.remove("active");
 
         });
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+        tab.classList.add("active");
 
-
-revealElements.forEach(function (element) {
-
-    observer.observe(element);
+    });
 
 });
 
 
-// =================================
-// BOOKING FORM
-// =================================
+// ===============================
+// ESC KEY
+// ===============================
 
-const bookingForm =
-    document.getElementById("bookingForm");
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-bookingForm.addEventListener(
-    "submit",
-    function (event) {
+        if (event.key === "Escape") {
 
-        event.preventDefault();
+            closeVehicleModal();
 
-        const name =
-            document.getElementById("name").value;
-
-        const phone =
-            document.getElementById("phone").value;
-
-        const checkin =
-            document.getElementById("checkin").value;
-
-        const guests =
-            document.getElementById("guests").value;
-
-
-        if (!name || !phone || !checkin || !guests) {
-
-            alert("Please fill in all required fields.");
-
-            return;
+            closeDetails();
 
         }
-
-
-        alert(
-            "Thank you, " +
-            name +
-            "! Your booking request has been received."
-        );
-
-
-        bookingForm.reset();
 
     }
 );
 
 
-// =================================
-// CURRENT YEAR
-// =================================
+// ===============================
+// WELCOME MESSAGE
+// ===============================
 
 console.log(
-    "Green Valley Farmhouse website loaded successfully."
+    "Kozhikode Corporation Fleet Management System loaded."
 );
