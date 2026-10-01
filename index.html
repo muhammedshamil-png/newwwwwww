@@ -1,180 +1,653 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kozhikode Corporation | Vehicle Management</title>
+    <title>Kozhikode Corporation | Smart Fleet</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
 
-    <aside class="sidebar">
+<aside class="sidebar">
 
-        <div class="brand">
-            <div class="brand-icon">
-                <i class="fa-solid fa-city"></i>
-            </div>
+    <div class="brand">
 
-            <div>
-                <h2>Kozhikode</h2>
-                <span>Corporation</span>
-            </div>
+        <div class="brand-icon">
+            <i class="fa-solid fa-city"></i>
+        </div>
+
+        <div class="brand-text">
+            <h2>Kozhikode</h2>
+            <span>Corporation</span>
+        </div>
+
+    </div>
+
+
+    <div class="menu-title">MAIN MENU</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="#" class="menu-link active" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="dashboard">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="vehicles">
+            <i class="fa-solid fa-truck"></i>
+            <span>Vehicles</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="drivers">
+            <i class="fa-solid fa-id-card"></i>
+            <span>Drivers</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="maintenance">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Maintenance</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="documents">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Documents</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="fuel">
+            <i class="fa-solid fa-gas-pump"></i>
+            <span>Fuel Management</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="trips">
+            <i class="fa-solid fa-route"></i>
+            <span>Trips</span>
+        </a>
+
+        <a href="#" class="menu-link" data-page="reports">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Reports</span>
+        </a>
+
+    </nav>
+
+
+    <div class="menu-title">SYSTEM</div>
+
+    <nav class="sidebar-menu">
+
+        <a href="#" class="menu-link" data-page="alerts">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Alerts</span>
+
+            <b class="notification">4</b>
+
+        </a>
+
+
+        <a href="#" class="menu-link" data-page="settings">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="user-avatar">AD</div>
+
+        <div class="user-info">
+
+            <strong>Administrator</strong>
+
+            <small>Fleet Manager</small>
+
+        </div>
+
+        <i class="fa-solid fa-ellipsis"></i>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main class="main">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div class="top-title">
+
+            <h1 id="pageTitle">
+                Kozhikode Corporation
+            </h1>
+
+            <p id="pageSubtitle">
+                Smart Fleet Management System
+            </p>
+
         </div>
 
 
-        <div class="menu-title">
-            MAIN MENU
-        </div>
+        <div class="top-actions">
 
+            <div class="search">
 
-        <nav class="sidebar-menu">
+                <i class="fa-solid fa-magnifying-glass"></i>
 
-            <a href="#" class="active">
-                <i class="fa-solid fa-chart-pie"></i>
-                Dashboard
-            </a>
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search vehicles, drivers..."
+                >
 
-            <a href="#vehicles">
-                <i class="fa-solid fa-truck"></i>
-                Vehicles
-            </a>
-
-            <a href="#drivers">
-                <i class="fa-solid fa-id-card"></i>
-                Drivers
-            </a>
-
-            <a href="#maintenance">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                Maintenance
-            </a>
-
-            <a href="#documents">
-                <i class="fa-solid fa-file-lines"></i>
-                Documents
-            </a>
-
-            <a href="#fuel">
-                <i class="fa-solid fa-gas-pump"></i>
-                Fuel Management
-            </a>
-
-            <a href="#trips">
-                <i class="fa-solid fa-route"></i>
-                Trips
-            </a>
-
-            <a href="#reports">
-                <i class="fa-solid fa-chart-line"></i>
-                Reports
-            </a>
-
-        </nav>
-
-
-        <div class="menu-title">
-            SYSTEM
-        </div>
-
-
-        <nav class="sidebar-menu">
-
-            <a href="#">
-                <i class="fa-solid fa-bell"></i>
-                Alerts
-                <span class="notification">4</span>
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
-
-
-        <div class="sidebar-bottom">
-
-            <div class="user-avatar">
-                AD
-            </div>
-
-            <div>
-                <strong>Administrator</strong>
-                <small>Fleet Manager</small>
-            </div>
-
-            <i class="fa-solid fa-ellipsis"></i>
-
-        </div>
-
-    </aside>
-
-
-    <!-- MAIN -->
-
-    <main class="main">
-
-        <!-- TOPBAR -->
-
-        <header class="topbar">
-
-            <div>
-                <h1>Fleet Dashboard</h1>
-                <p>Welcome back, Administrator</p>
             </div>
 
 
-            <div class="top-actions">
+            <button
+                class="icon-button"
+                onclick="showPage('alerts')">
 
-                <div class="search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search vehicles..."
-                    >
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <button class="profile">
+
+                <div class="profile-avatar">
+                    AD
+                </div>
+
+                <div class="profile-text">
+
+                    <strong>Admin</strong>
+
+                    <small>Fleet Manager</small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         HOME
+    ================================================== -->
+
+    <section class="page active-page" id="home">
+
+
+        <div class="home-hero">
+
+            <div class="home-content">
+
+                <span class="home-badge">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    KOZHIKODE CORPORATION
+
+                </span>
+
+
+                <h1>
+
+                    Smart Fleet
+
+                    <span>Management System</span>
+
+                </h1>
+
+
+                <p>
+
+                    Manage corporation vehicles, drivers,
+                    maintenance, fuel, documents and trips
+                    from one powerful fleet management system.
+
+                </p>
+
+
+                <div class="home-buttons">
+
+                    <button
+                        class="home-primary"
+                        onclick="showPage('dashboard')">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        Open Dashboard
+
+                    </button>
+
+
+                    <button
+                        class="home-secondary"
+                        onclick="openVehicleModal()">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Vehicle
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="home-visual">
+
+                <div class="floating-card card-one">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <div>
+
+                        <strong>128</strong>
+
+                        <span>Total Vehicles</span>
+
+                    </div>
+
                 </div>
 
 
-                <button class="icon-button">
-                    <i class="fa-regular fa-bell"></i>
-                    <span></span>
-                </button>
+                <div class="truck-scene">
 
+                    <div class="road"></div>
 
-                <button class="profile">
-                    <div class="profile-avatar">
-                        AD
+                    <div class="big-truck">
+
+                        <i class="fa-solid fa-truck"></i>
+
                     </div>
+
+                    <div class="location-pin">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <i class="fa-solid fa-gas-pump"></i>
 
                     <div>
-                        <strong>Admin</strong>
-                        <small>Corporation</small>
+
+                        <strong>8.4 km/L</strong>
+
+                        <span>Fleet Efficiency</span>
+
                     </div>
 
-                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME STATS -->
+
+        <div class="home-stats">
+
+            <div class="home-stat">
+
+                <div class="home-stat-icon blue">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div>
+                    <strong>128</strong>
+                    <span>Total Vehicles</span>
+                </div>
+
+            </div>
+
+
+            <div class="home-stat">
+
+                <div class="home-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <strong>94</strong>
+                    <span>Active Vehicles</span>
+                </div>
+
+            </div>
+
+
+            <div class="home-stat">
+
+                <div class="home-stat-icon orange">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+
+                <div>
+                    <strong>12</strong>
+                    <span>Maintenance</span>
+                </div>
+
+            </div>
+
+
+            <div class="home-stat">
+
+                <div class="home-stat-icon red">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div>
+                    <strong>7</strong>
+                    <span>Important Alerts</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACCESS -->
+
+        <div class="home-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Quick Access</h2>
+
+                    <p>
+                        Frequently used fleet management tools
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <div
+                    class="quick-card"
+                    onclick="showPage('vehicles')">
+
+                    <div class="quick-icon blue">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <h3>Vehicles</h3>
+
+                    <p>
+                        View and manage all corporation vehicles.
+                    </p>
+
+                    <span>
+                        Open Vehicles
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="quick-card"
+                    onclick="showPage('drivers')">
+
+                    <div class="quick-icon green">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+
+                    <h3>Drivers</h3>
+
+                    <p>
+                        Manage drivers and licence information.
+                    </p>
+
+                    <span>
+                        Manage Drivers
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="quick-card"
+                    onclick="showPage('maintenance')">
+
+                    <div class="quick-icon orange">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3>Maintenance</h3>
+
+                    <p>
+                        Track vehicle servicing and repairs.
+                    </p>
+
+                    <span>
+                        View Maintenance
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="quick-card"
+                    onclick="showPage('fuel')">
+
+                    <div class="quick-icon purple">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+
+                    <h3>Fuel Management</h3>
+
+                    <p>
+                        Monitor fuel consumption and costs.
+                    </p>
+
+                    <span>
+                        View Fuel
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- RECENT VEHICLES -->
+
+        <div class="home-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Recently Added Vehicles</h2>
+
+                    <p>
+                        Latest vehicles registered in the system
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="outline-button"
+                    onclick="showPage('vehicles')">
+
+                    View All
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </button>
 
             </div>
 
-        </header>
+
+            <div class="recent-vehicles">
+
+                <div class="recent-vehicle">
+
+                    <div class="recent-icon blue">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div>
+                        <strong>Ashok Leyland</strong>
+                        <span>KL-11-AB-1234</span>
+                    </div>
+
+                    <span class="status active-status">
+                        Active
+                    </span>
+
+                    <button
+                        onclick="openVehicleDetails('KL-11-AB-1234')">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
 
 
-        <!-- STATISTICS -->
+                <div class="recent-vehicle">
 
-        <section class="stats">
+                    <div class="recent-icon green">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div>
+                        <strong>Tata Ace</strong>
+                        <span>KL-11-CD-5678</span>
+                    </div>
+
+                    <span class="status active-status">
+                        Active
+                    </span>
+
+                    <button
+                        onclick="openVehicleDetails('KL-11-CD-5678')">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="recent-vehicle">
+
+                    <div class="recent-icon orange">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+
+                    <div>
+                        <strong>Mahindra Bolero</strong>
+                        <span>KL-11-EF-9012</span>
+                    </div>
+
+                    <span class="status maintenance-status">
+                        Maintenance
+                    </span>
+
+                    <button
+                        onclick="openVehicleDetails('KL-11-EF-9012')">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         DASHBOARD
+    ================================================== -->
+
+    <section class="page" id="dashboard">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Fleet Dashboard</h2>
+
+                <p>
+                    Overview of Kozhikode Corporation fleet
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="openVehicleModal()">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Vehicle
+
+            </button>
+
+        </div>
+
+
+        <div class="stats">
 
             <div class="stat-card">
 
@@ -184,10 +657,9 @@
 
                 <div>
                     <span>Total Vehicles</span>
-                    <h2>128</h2>
+                    <h2 id="totalVehicleCount">128</h2>
                     <small class="positive">
-                        <i class="fa-solid fa-arrow-up"></i>
-                        6 this month
+                        +6 this month
                     </small>
                 </div>
 
@@ -214,11 +686,11 @@
             <div class="stat-card">
 
                 <div class="stat-icon orange">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <i class="fa-solid fa-wrench"></i>
                 </div>
 
                 <div>
-                    <span>Under Maintenance</span>
+                    <span>Maintenance</span>
                     <h2>12</h2>
                     <small class="warning">
                         4 urgent
@@ -235,7 +707,7 @@
                 </div>
 
                 <div>
-                    <span>Documents Expiring</span>
+                    <span>Expiring Documents</span>
                     <h2>7</h2>
                     <small class="danger">
                         Next 30 days
@@ -244,16 +716,12 @@
 
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- DASHBOARD GRID -->
+        <div class="dashboard-grid">
 
-        <section class="dashboard-grid">
-
-            <!-- VEHICLE OVERVIEW -->
-
-            <div class="panel large-panel" id="vehicles">
+            <div class="panel">
 
                 <div class="panel-header">
 
@@ -264,31 +732,10 @@
 
                     <button
                         class="add-button"
-                        onclick="openVehicleModal()"
-                    >
-                        <i class="fa-solid fa-plus"></i>
-                        Add Vehicle
-                    </button>
+                        onclick="showPage('vehicles')">
 
-                </div>
+                        View All
 
-
-                <div class="filters">
-
-                    <button class="filter active">
-                        All <span>128</span>
-                    </button>
-
-                    <button class="filter">
-                        Active <span>94</span>
-                    </button>
-
-                    <button class="filter">
-                        Maintenance <span>12</span>
-                    </button>
-
-                    <button class="filter">
-                        Inactive <span>22</span>
                     </button>
 
                 </div>
@@ -303,15 +750,12 @@
                         <span>Type</span>
                         <span>Driver</span>
                         <span>Status</span>
-                        <span>Action</span>
+                        <span></span>
 
                     </div>
 
 
-                    <div
-                        class="vehicle-row"
-                        data-search="KL11AB1234 Ashok Leyland Ravi Kumar"
-                    >
+                    <div class="vehicle-row">
 
                         <div class="vehicle-name">
 
@@ -338,18 +782,16 @@
 
                         <button
                             class="view-button"
-                            onclick="showVehicle('KL-11-AB-1234')"
-                        >
+                            onclick="openVehicleDetails('KL-11-AB-1234')">
+
                             View
+
                         </button>
 
                     </div>
 
 
-                    <div
-                        class="vehicle-row"
-                        data-search="KL11CD5678 Tata Ace Suresh"
-                    >
+                    <div class="vehicle-row">
 
                         <div class="vehicle-name">
 
@@ -376,23 +818,21 @@
 
                         <button
                             class="view-button"
-                            onclick="showVehicle('KL-11-CD-5678')"
-                        >
+                            onclick="openVehicleDetails('KL-11-CD-5678')">
+
                             View
+
                         </button>
 
                     </div>
 
 
-                    <div
-                        class="vehicle-row"
-                        data-search="KL11EF9012 Mahindra Bolero Manoj"
-                    >
+                    <div class="vehicle-row">
 
                         <div class="vehicle-name">
 
                             <div class="vehicle-picture orange">
-                                <i class="fa-solid fa-car-side"></i>
+                                <i class="fa-solid fa-car"></i>
                             </div>
 
                             <div>
@@ -414,47 +854,10 @@
 
                         <button
                             class="view-button"
-                            onclick="showVehicle('KL-11-EF-9012')"
-                        >
+                            onclick="openVehicleDetails('KL-11-EF-9012')">
+
                             View
-                        </button>
 
-                    </div>
-
-
-                    <div
-                        class="vehicle-row"
-                        data-search="KL11GH3456 Tata Bus Ajith"
-                    >
-
-                        <div class="vehicle-name">
-
-                            <div class="vehicle-picture purple">
-                                <i class="fa-solid fa-bus"></i>
-                            </div>
-
-                            <div>
-                                <strong>Tata Bus</strong>
-                                <small>2019 • Diesel</small>
-                            </div>
-
-                        </div>
-
-                        <strong>KL-11-GH-3456</strong>
-
-                        <span>Bus</span>
-
-                        <span>Ajith</span>
-
-                        <span class="status inactive-status">
-                            Inactive
-                        </span>
-
-                        <button
-                            class="view-button"
-                            onclick="showVehicle('KL-11-GH-3456')"
-                        >
-                            View
                         </button>
 
                     </div>
@@ -464,9 +867,7 @@
             </div>
 
 
-            <!-- ALERTS -->
-
-            <div class="panel alerts-panel">
+            <div class="panel">
 
                 <div class="panel-header">
 
@@ -474,8 +875,6 @@
                         <h2>Important Alerts</h2>
                         <p>Needs your attention</p>
                     </div>
-
-                    <i class="fa-solid fa-ellipsis"></i>
 
                 </div>
 
@@ -498,13 +897,13 @@
                 <div class="alert">
 
                     <div class="alert-icon orange-alert">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <i class="fa-solid fa-wrench"></i>
                     </div>
 
                     <div>
                         <strong>Service Due</strong>
                         <p>KL-11-EF-9012</p>
-                        <small>Service due at 80,000 km</small>
+                        <small>Service required</small>
                     </div>
 
                 </div>
@@ -517,505 +916,1438 @@
                     </div>
 
                     <div>
-                        <strong>License Renewal</strong>
+                        <strong>Licence Renewal</strong>
                         <p>Driver: Suresh</p>
                         <small>Expires in 12 days</small>
                     </div>
 
                 </div>
 
-
-                <div class="alert">
-
-                    <div class="alert-icon blue-alert">
-                        <i class="fa-solid fa-gas-pump"></i>
-                    </div>
-
-                    <div>
-                        <strong>Fuel Alert</strong>
-                        <p>KL-11-CD-5678</p>
-                        <small>Unusual fuel usage detected</small>
-                    </div>
-
-                </div>
-
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- QUICK ACTIONS -->
+    <!-- =================================================
+         VEHICLES
+    ================================================== -->
 
-        <section class="quick-section">
+    <section class="page" id="vehicles">
 
-            <div class="section-title">
+        <div class="page-heading">
+
+            <div>
+                <h2>Vehicle Management</h2>
+                <p>View and manage all corporation vehicles.</p>
+            </div>
+
+            <button
+                class="add-button"
+                onclick="openVehicleModal()">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Vehicle
+
+            </button>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
 
                 <div>
-                    <h2>Quick Actions</h2>
-                    <p>Manage your fleet faster</p>
+                    <span>Total</span>
+                    <h2 id="vehicleTotal">128</h2>
                 </div>
 
             </div>
 
 
-            <div class="quick-grid">
+            <div class="stat-card">
 
-                <button onclick="openVehicleModal()">
-                    <i class="fa-solid fa-truck-medical"></i>
-                    <strong>Add Vehicle</strong>
-                    <small>Register new vehicle</small>
-                </button>
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-check"></i>
+                </div>
 
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
-                    <strong>Add Driver</strong>
-                    <small>Create driver profile</small>
-                </button>
+                <div>
+                    <span>Active</span>
+                    <h2>94</h2>
+                </div>
 
-                <button>
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <strong>Schedule Service</strong>
-                    <small>Plan maintenance</small>
-                </button>
+            </div>
 
-                <button>
-                    <i class="fa-solid fa-file-arrow-up"></i>
-                    <strong>Upload Document</strong>
-                    <small>Add vehicle documents</small>
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+
+                <div>
+                    <span>Maintenance</span>
+                    <h2>12</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+
+                <div>
+                    <span>Inactive</span>
+                    <h2>22</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div class="search-large">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="vehicleSearch"
+                    placeholder="Search vehicle, registration or driver..."
+                >
+
+            </div>
+
+
+            <div class="full-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Vehicle</th>
+                            <th>Registration</th>
+                            <th>Type</th>
+                            <th>Driver</th>
+                            <th>Fuel</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="vehicleList">
+
+                        <tr>
+
+                            <td>
+                                <strong>Ashok Leyland</strong>
+                            </td>
+
+                            <td>KL-11-AB-1234</td>
+
+                            <td>Heavy Truck</td>
+
+                            <td>Ravi Kumar</td>
+
+                            <td>Diesel</td>
+
+                            <td>
+                                <span class="status active-status">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-button"
+                                    onclick="openVehicleDetails('KL-11-AB-1234')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Tata Ace</strong>
+                            </td>
+
+                            <td>KL-11-CD-5678</td>
+
+                            <td>Mini Truck</td>
+
+                            <td>Suresh</td>
+
+                            <td>Diesel</td>
+
+                            <td>
+                                <span class="status active-status">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-button"
+                                    onclick="openVehicleDetails('KL-11-CD-5678')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Mahindra Bolero</strong>
+                            </td>
+
+                            <td>KL-11-EF-9012</td>
+
+                            <td>Utility</td>
+
+                            <td>Manoj</td>
+
+                            <td>Diesel</td>
+
+                            <td>
+                                <span class="status maintenance-status">
+                                    Maintenance
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-button"
+                                    onclick="openVehicleDetails('KL-11-EF-9012')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Tata Bus</strong>
+                            </td>
+
+                            <td>KL-11-GH-3456</td>
+
+                            <td>Bus</td>
+
+                            <td>Ajith</td>
+
+                            <td>Diesel</td>
+
+                            <td>
+                                <span class="status inactive-status">
+                                    Inactive
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="view-button"
+                                    onclick="openVehicleDetails('KL-11-GH-3456')">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         DRIVERS
+    ================================================== -->
+
+    <section class="page" id="drivers">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Driver Management</h2>
+
+                <p>
+                    Manage corporation drivers and licences.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('Driver added successfully')">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add Driver
+
+            </button>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+            <div class="driver-card">
+
+                <div class="driver-avatar">
+                    RK
+                </div>
+
+                <h3>Ravi Kumar</h3>
+
+                <p>Heavy Vehicle Driver</p>
+
+                <span class="status active-status">
+                    Active
+                </span>
+
+                <div class="driver-info">
+
+                    <span>Licence</span>
+
+                    <strong>KL-DRV-10245</strong>
+
+                </div>
+
+                <div class="driver-info">
+
+                    <span>Assigned Vehicle</span>
+
+                    <strong>KL-11-AB-1234</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="driver-card">
+
+                <div class="driver-avatar green-avatar">
+                    SU
+                </div>
+
+                <h3>Suresh</h3>
+
+                <p>Truck Driver</p>
+
+                <span class="status active-status">
+                    Active
+                </span>
+
+                <div class="driver-info">
+
+                    <span>Licence</span>
+
+                    <strong>KL-DRV-20451</strong>
+
+                </div>
+
+                <div class="driver-info">
+
+                    <span>Assigned Vehicle</span>
+
+                    <strong>KL-11-CD-5678</strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="driver-card">
+
+                <div class="driver-avatar orange-avatar">
+                    MA
+                </div>
+
+                <h3>Manoj</h3>
+
+                <p>Utility Vehicle Driver</p>
+
+                <span class="status maintenance-status">
+                    On Leave
+                </span>
+
+                <div class="driver-info">
+
+                    <span>Licence</span>
+
+                    <strong>KL-DRV-30567</strong>
+
+                </div>
+
+                <div class="driver-info">
+
+                    <span>Assigned Vehicle</span>
+
+                    <strong>KL-11-EF-9012</strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MAINTENANCE
+    ================================================== -->
+
+    <section class="page" id="maintenance">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Maintenance</h2>
+
+                <p>
+                    Vehicle service and repair management.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('Maintenance scheduled')">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Schedule Service
+
+            </button>
+
+        </div>
+
+
+        <div class="maintenance-list">
+
+            <div class="maintenance-card">
+
+                <div class="maintenance-icon orange">
+                    <i class="fa-solid fa-oil-can"></i>
+                </div>
+
+                <div>
+                    <strong>Ashok Leyland</strong>
+                    <small>KL-11-AB-1234</small>
+                </div>
+
+                <div>
+                    <small>Service Type</small>
+                    <strong>Oil Change</strong>
+                </div>
+
+                <div>
+                    <small>Due Date</small>
+                    <strong>18 Oct 2026</strong>
+                </div>
+
+                <span class="status maintenance-status">
+                    Upcoming
+                </span>
+
+            </div>
+
+
+            <div class="maintenance-card">
+
+                <div class="maintenance-icon red-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div>
+                    <strong>Mahindra Bolero</strong>
+                    <small>KL-11-EF-9012</small>
+                </div>
+
+                <div>
+                    <small>Service Type</small>
+                    <strong>Engine Check</strong>
+                </div>
+
+                <div>
+                    <small>Due Date</small>
+                    <strong>Today</strong>
+                </div>
+
+                <span class="status danger-status">
+                    Urgent
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         DOCUMENTS
+    ================================================== -->
+
+    <section class="page" id="documents">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Documents</h2>
+
+                <p>
+                    Insurance, registration and certificates.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('Document upload started')">
+
+                <i class="fa-solid fa-upload"></i>
+
+                Upload Document
+
+            </button>
+
+        </div>
+
+
+        <div class="document-grid">
+
+            <div class="document-card">
+
+                <i class="fa-solid fa-file-shield"></i>
+
+                <h3>Insurance</h3>
+
+                <strong>121 Valid</strong>
+
+                <span class="danger">
+                    7 Expiring
+                </span>
+
+            </div>
+
+
+            <div class="document-card">
+
+                <i class="fa-solid fa-certificate"></i>
+
+                <h3>Fitness Certificate</h3>
+
+                <strong>116 Valid</strong>
+
+                <span class="warning">
+                    12 Due
+                </span>
+
+            </div>
+
+
+            <div class="document-card">
+
+                <i class="fa-solid fa-file-contract"></i>
+
+                <h3>Registration</h3>
+
+                <strong>128 Records</strong>
+
+                <span class="positive">
+                    All Available
+                </span>
+
+            </div>
+
+
+            <div class="document-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <h3>Driver Licences</h3>
+
+                <strong>92 Valid</strong>
+
+                <span class="warning">
+                    4 Renewal
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FUEL
+    ================================================== -->
+
+    <section class="page" id="fuel">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Fuel Management</h2>
+
+                <p>
+                    Monitor fuel usage and expenditure.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('Fuel entry added')">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Fuel Entry
+
+            </button>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-gas-pump"></i>
+                </div>
+
+                <div>
+                    <span>This Month</span>
+                    <h2>18,420 L</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div>
+                    <span>Fuel Cost</span>
+                    <h2>₹18.6L</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <span>Efficiency</span>
+                    <h2>8.4 km/L</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>Recent Fuel Entries</h2>
+
+            <div class="full-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Date</th>
+                            <th>Vehicle</th>
+                            <th>Fuel</th>
+                            <th>Quantity</th>
+                            <th>Cost</th>
+                            <th>Station</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>01 Oct 2026</td>
+                            <td>KL-11-AB-1234</td>
+                            <td>Diesel</td>
+                            <td>85 L</td>
+                            <td>₹8,120</td>
+                            <td>Corporation Fuel Station</td>
+                        </tr>
+
+                        <tr>
+                            <td>30 Sep 2026</td>
+                            <td>KL-11-CD-5678</td>
+                            <td>Diesel</td>
+                            <td>55 L</td>
+                            <td>₹5,260</td>
+                            <td>Corporation Fuel Station</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TRIPS
+    ================================================== -->
+
+    <section class="page" id="trips">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Trip Management</h2>
+
+                <p>
+                    Track vehicle trips and assignments.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('New trip created')">
+
+                <i class="fa-solid fa-route"></i>
+
+                New Trip
+
+            </button>
+
+        </div>
+
+
+        <div class="trip-list">
+
+            <div class="trip-card">
+
+                <div class="route-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div class="route">
+                    <strong>Kozhikode</strong>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <strong>Ramanattukara</strong>
+                </div>
+
+                <div>
+                    <small>Vehicle</small>
+                    <strong>KL-11-AB-1234</strong>
+                </div>
+
+                <div>
+                    <small>Driver</small>
+                    <strong>Ravi Kumar</strong>
+                </div>
+
+                <span class="status active-status">
+                    Completed
+                </span>
+
+            </div>
+
+
+            <div class="trip-card">
+
+                <div class="route-icon green">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div class="route">
+                    <strong>Kozhikode</strong>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <strong>Feroke</strong>
+                </div>
+
+                <div>
+                    <small>Vehicle</small>
+                    <strong>KL-11-CD-5678</strong>
+                </div>
+
+                <div>
+                    <small>Driver</small>
+                    <strong>Suresh</strong>
+                </div>
+
+                <span class="status maintenance-status">
+                    Running
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         REPORTS
+    ================================================== -->
+
+    <section class="page" id="reports">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Reports & Analytics</h2>
+
+                <p>
+                    Fleet performance and operational reports.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="demoAction('Report generated successfully')">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Generate Report
+
+            </button>
+
+        </div>
+
+
+        <div class="report-grid">
+
+            <div class="report-card">
+
+                <i class="fa-solid fa-truck"></i>
+
+                <h3>Vehicle Report</h3>
+
+                <p>
+                    Complete fleet inventory and status.
+                </p>
+
+                <button onclick="demoAction('Vehicle report generated')">
+                    Generate
                 </button>
 
             </div>
 
-        </section>
+
+            <div class="report-card">
+
+                <i class="fa-solid fa-gas-pump"></i>
+
+                <h3>Fuel Report</h3>
+
+                <p>
+                    Fuel consumption and expenditure.
+                </p>
+
+                <button onclick="demoAction('Fuel report generated')">
+                    Generate
+                </button>
+
+            </div>
 
 
-        <!-- ANALYTICS -->
+            <div class="report-card">
 
-        <section class="analytics-grid">
+                <i class="fa-solid fa-wrench"></i>
 
-            <div class="panel">
+                <h3>Maintenance Report</h3>
 
-                <div class="panel-header">
+                <p>
+                    Service and repair history.
+                </p>
 
-                    <div>
-                        <h2>Fleet Utilization</h2>
-                        <p>Vehicle usage this month</p>
-                    </div>
+                <button onclick="demoAction('Maintenance report generated')">
+                    Generate
+                </button>
 
-                    <select>
-                        <option>This Month</option>
-                        <option>Last Month</option>
-                        <option>Last 6 Months</option>
+            </div>
+
+
+            <div class="report-card">
+
+                <i class="fa-solid fa-route"></i>
+
+                <h3>Trip Report</h3>
+
+                <p>
+                    Vehicle trip and distance report.
+                </p>
+
+                <button onclick="demoAction('Trip report generated')">
+                    Generate
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ALERTS
+    ================================================== -->
+
+    <section class="page" id="alerts">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Alerts & Notifications</h2>
+
+                <p>
+                    Important fleet notifications.
+                </p>
+
+            </div>
+
+            <button
+                class="add-button"
+                onclick="clearAlerts()">
+
+                <i class="fa-solid fa-check-double"></i>
+
+                Mark All Read
+
+            </button>
+
+        </div>
+
+
+        <div id="alertList">
+
+            <div class="big-alert danger-alert">
+
+                <i class="fa-solid fa-file-circle-xmark"></i>
+
+                <div>
+
+                    <h3>Insurance Expiring</h3>
+
+                    <p>
+                        Insurance for KL-11-AB-1234
+                        expires in 5 days.
+                    </p>
+
+                </div>
+
+                <strong>5 days</strong>
+
+            </div>
+
+
+            <div class="big-alert warning-alert">
+
+                <i class="fa-solid fa-wrench"></i>
+
+                <div>
+
+                    <h3>Maintenance Required</h3>
+
+                    <p>
+                        KL-11-EF-9012 requires engine service.
+                    </p>
+
+                </div>
+
+                <strong>Today</strong>
+
+            </div>
+
+
+            <div class="big-alert info-alert">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <div>
+
+                    <h3>Driver Licence Renewal</h3>
+
+                    <p>
+                        Suresh's driving licence expires soon.
+                    </p>
+
+                </div>
+
+                <strong>12 days</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SETTINGS
+    ================================================== -->
+
+    <section class="page" id="settings">
+
+        <div class="page-heading">
+
+            <div>
+
+                <h2>Settings</h2>
+
+                <p>
+                    Configure the fleet management system.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-panel">
+
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Dark Mode</h3>
+                    <p>Change dashboard appearance.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox" id="darkMode">
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Email Notifications</h3>
+                    <p>Receive vehicle alerts by email.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox" checked>
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Maintenance Alerts</h3>
+                    <p>Notify when vehicle service is due.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox" checked>
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Automatic Reports</h3>
+                    <p>Generate monthly fleet reports.</p>
+                </div>
+
+                <label class="switch">
+
+                    <input type="checkbox">
+
+                    <span></span>
+
+                </label>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     ADD VEHICLE MODAL
+====================================================== -->
+
+<div class="modal" id="vehicleModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>Add New Vehicle</h2>
+
+                <p>
+                    Register a corporation vehicle.
+                </p>
+
+            </div>
+
+            <button onclick="closeVehicleModal()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="vehicleForm">
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Vehicle Name</label>
+
+                    <input
+                        id="newVehicleName"
+                        placeholder="Tata Truck"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Registration Number</label>
+
+                    <input
+                        id="newRegistration"
+                        placeholder="KL-11-XX-0000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Vehicle Type</label>
+
+                    <select id="newVehicleType">
+
+                        <option>Truck</option>
+                        <option>Bus</option>
+                        <option>Car</option>
+                        <option>Van</option>
+                        <option>Utility Vehicle</option>
+
                     </select>
 
                 </div>
 
 
-                <div class="chart">
+                <div class="input-group">
 
-                    <div class="chart-bars">
+                    <label>Fuel Type</label>
 
-                        <div class="bar" style="height:45%">
-                            <span>Mon</span>
-                        </div>
+                    <select id="newFuelType">
 
-                        <div class="bar" style="height:65%">
-                            <span>Tue</span>
-                        </div>
+                        <option>Diesel</option>
+                        <option>Petrol</option>
+                        <option>Electric</option>
+                        <option>CNG</option>
 
-                        <div class="bar" style="height:55%">
-                            <span>Wed</span>
-                        </div>
-
-                        <div class="bar" style="height:80%">
-                            <span>Thu</span>
-                        </div>
-
-                        <div class="bar" style="height:70%">
-                            <span>Fri</span>
-                        </div>
-
-                        <div class="bar" style="height:90%">
-                            <span>Sat</span>
-                        </div>
-
-                        <div class="bar" style="height:60%">
-                            <span>Sun</span>
-                        </div>
-
-                    </div>
+                    </select>
 
                 </div>
+
+
+                <div class="input-group">
+
+                    <label>Manufacturing Year</label>
+
+                    <input
+                        id="newYear"
+                        type="number"
+                        placeholder="2026"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Odometer</label>
+
+                    <input
+                        id="newOdometer"
+                        type="number"
+                        placeholder="Current KM"
+                    >
+
+                </div>
+
 
             </div>
 
 
-            <div class="panel">
+            <div class="modal-actions">
 
-                <div class="panel-header">
+                <button
+                    type="button"
+                    class="cancel-button"
+                    onclick="closeVehicleModal()">
 
-                    <div>
-                        <h2>Vehicle Types</h2>
-                        <p>Fleet distribution</p>
-                    </div>
+                    Cancel
 
-                </div>
-
-
-                <div class="type-list">
-
-                    <div class="type-item">
-                        <span>
-                            <i class="fa-solid fa-truck"></i>
-                            Trucks
-                        </span>
-                        <strong>42</strong>
-                    </div>
-
-                    <div class="type-item">
-                        <span>
-                            <i class="fa-solid fa-bus"></i>
-                            Buses
-                        </span>
-                        <strong>28</strong>
-                    </div>
-
-                    <div class="type-item">
-                        <span>
-                            <i class="fa-solid fa-car"></i>
-                            Cars
-                        </span>
-                        <strong>31</strong>
-                    </div>
-
-                    <div class="type-item">
-                        <span>
-                            <i class="fa-solid fa-van-shuttle"></i>
-                            Vans
-                        </span>
-                        <strong>27</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
+                </button>
 
 
-    <!-- ADD VEHICLE MODAL -->
+                <button
+                    type="submit"
+                    class="add-button">
 
-    <div
-        class="modal"
-        id="vehicleModal"
-    >
+                    <i class="fa-solid fa-plus"></i>
 
-        <div class="modal-box">
+                    Add Vehicle
 
-            <div class="modal-header">
-
-                <div>
-                    <h2>Add New Vehicle</h2>
-                    <p>Enter vehicle information</p>
-                </div>
-
-                <button onclick="closeVehicleModal()">
-                    <i class="fa-solid fa-xmark"></i>
                 </button>
 
             </div>
 
-
-            <form id="vehicleForm">
-
-                <div class="form-grid">
-
-                    <div class="input-group">
-
-                        <label>Vehicle Name</label>
-
-                        <input
-                            type="text"
-                            id="vehicleName"
-                            placeholder="Example: Tata Truck"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Registration Number</label>
-
-                        <input
-                            type="text"
-                            id="registration"
-                            placeholder="KL-11-XX-0000"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Vehicle Type</label>
-
-                        <select id="vehicleType">
-
-                            <option>Truck</option>
-                            <option>Bus</option>
-                            <option>Car</option>
-                            <option>Van</option>
-                            <option>Utility Vehicle</option>
-                            <option>Other</option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Fuel Type</label>
-
-                        <select>
-
-                            <option>Diesel</option>
-                            <option>Petrol</option>
-                            <option>Electric</option>
-                            <option>CNG</option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Manufacturing Year</label>
-
-                        <input
-                            type="number"
-                            min="1990"
-                            max="2026"
-                            placeholder="2024"
-                        >
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Odometer</label>
-
-                        <input
-                            type="number"
-                            placeholder="Current KM"
-                        >
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Assigned Driver</label>
-
-                        <select>
-
-                            <option>Select Driver</option>
-                            <option>Ravi Kumar</option>
-                            <option>Suresh</option>
-                            <option>Manoj</option>
-                            <option>Ajith</option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="input-group">
-
-                        <label>Department</label>
-
-                        <select>
-
-                            <option>Waste Management</option>
-                            <option>Public Works</option>
-                            <option>Water Supply</option>
-                            <option>Health</option>
-                            <option>General Administration</option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <div class="modal-actions">
-
-                    <button
-                        type="button"
-                        class="cancel-button"
-                        onclick="closeVehicleModal()"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="submit"
-                        class="add-button"
-                    >
-                        <i class="fa-solid fa-plus"></i>
-                        Add Vehicle
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
+        </form>
 
     </div>
 
+</div>
 
-    <!-- VEHICLE DETAILS MODAL -->
 
-    <div
-        class="modal"
-        id="detailsModal"
-    >
+<!-- =====================================================
+     VEHICLE DETAILS MODAL
+====================================================== -->
 
-        <div class="details-box">
+<div class="modal" id="detailsModal">
 
-            <div class="details-top">
+    <div class="details-box">
 
-                <button onclick="closeDetails()">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+        <div class="details-top">
+
+            <button onclick="closeDetails()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="vehicle-profile">
+
+            <div class="big-vehicle-icon">
+
+                <i class="fa-solid fa-truck"></i>
 
             </div>
 
 
-            <div class="vehicle-profile">
+            <div>
 
-                <div class="big-vehicle-icon">
-                    <i class="fa-solid fa-truck"></i>
-                </div>
+                <span class="status active-status">
+                    Active
+                </span>
+
+                <h2 id="detailRegistration">
+                    KL-11-AB-1234
+                </h2>
+
+                <p id="detailVehicleName">
+                    Ashok Leyland • Heavy Truck
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="detail-stats">
+
+            <div>
+                <span>Odometer</span>
+                <strong id="detailOdometer">
+                    72,450 km
+                </strong>
+            </div>
+
+            <div>
+                <span>Fuel</span>
+                <strong id="detailFuel">
+                    Diesel
+                </strong>
+            </div>
+
+            <div>
+                <span>Year</span>
+                <strong id="detailYear">
+                    2022
+                </strong>
+            </div>
+
+            <div>
+                <span>Driver</span>
+                <strong>
+                    Ravi Kumar
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="vehicle-details-content">
+
+            <h3>Vehicle Information</h3>
+
+
+            <div class="information-grid">
 
                 <div>
+                    <span>Registration</span>
 
-                    <span class="status active-status">
-                        Active
-                    </span>
-
-                    <h2 id="detailRegistration">
+                    <strong id="infoRegistration">
                         KL-11-AB-1234
-                    </h2>
-
-                    <p>
-                        Ashok Leyland • Heavy Truck
-                    </p>
-
+                    </strong>
                 </div>
 
-            </div>
-
-
-            <div class="detail-stats">
 
                 <div>
-                    <span>Odometer</span>
-                    <strong>72,450 km</strong>
+                    <span>Engine Number</span>
+
+                    <strong>
+                        AL2022X4589
+                    </strong>
                 </div>
+
 
                 <div>
-                    <span>Fuel</span>
-                    <strong>Diesel</strong>
+                    <span>Chassis Number</span>
+
+                    <strong>
+                        MB1K23456789
+                    </strong>
                 </div>
+
 
                 <div>
-                    <span>Year</span>
-                    <strong>2022</strong>
+                    <span>Department</span>
+
+                    <strong>
+                        Public Works
+                    </strong>
                 </div>
+
 
                 <div>
-                    <span>Driver</span>
-                    <strong>Ravi Kumar</strong>
+                    <span>Insurance</span>
+
+                    <strong class="valid">
+                        Valid
+                    </strong>
                 </div>
 
-            </div>
 
+                <div>
+                    <span>Fitness Certificate</span>
 
-            <div class="detail-tabs">
-
-                <button class="tab active">
-                    Overview
-                </button>
-
-                <button class="tab">
-                    Documents
-                </button>
-
-                <button class="tab">
-                    Maintenance
-                </button>
-
-                <button class="tab">
-                    Fuel
-                </button>
-
-                <button class="tab">
-                    Trips
-                </button>
-
-            </div>
-
-
-            <div class="vehicle-details-content">
-
-                <h3>Vehicle Information</h3>
-
-                <div class="information-grid">
-
-                    <div>
-                        <span>Registration</span>
-                        <strong>KL-11-AB-1234</strong>
-                    </div>
-
-                    <div>
-                        <span>Engine Number</span>
-                        <strong>AL2022X4589</strong>
-                    </div>
-
-                    <div>
-                        <span>Chassis Number</span>
-                        <strong>MB1K23456789</strong>
-                    </div>
-
-                    <div>
-                        <span>Department</span>
-                        <strong>Public Works</strong>
-                    </div>
-
-                    <div>
-                        <span>Insurance</span>
-                        <strong class="valid">
-                            Valid
-                        </strong>
-                    </div>
-
-                    <div>
-                        <span>Fitness Certificate</span>
-                        <strong class="valid">
-                            Valid
-                        </strong>
-                    </div>
-
+                    <strong class="valid">
+                        Valid
+                    </strong>
                 </div>
 
             </div>
@@ -1024,8 +2356,20 @@
 
     </div>
 
+</div>
 
-    <script src="script.js"></script>
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div id="toast" class="toast">
+    Action completed successfully
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
+```
