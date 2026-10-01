@@ -4,295 +4,742 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Green Valley Farmhouse</title>
+    <title>Kozhikode Corporation | Vehicle Management</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
+    <!-- SIDEBAR -->
 
-        <div class="logo">
-            Green<span>Valley</span>
-        </div>
+    <aside class="sidebar">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#facilities">Facilities</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#booking">Booking</a>
-        </nav>
-
-        <a href="#booking" class="book-button">
-            Book Now
-        </a>
-
-    </header>
-
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <p class="eyebrow">
-                WELCOME TO GREEN VALLEY
-            </p>
-
-            <h1>
-                Escape to
-                <span>Nature.</span>
-            </h1>
-
-            <p class="hero-description">
-                A beautiful private farmhouse surrounded by greenery,
-                fresh air and peaceful countryside views.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#booking" class="button primary">
-                    Book Your Stay
-                </a>
-
-                <a href="#gallery" class="button secondary">
-                    Explore Farmhouse
-                </a>
-
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-city"></i>
             </div>
 
+            <div>
+                <h2>Kozhikode</h2>
+                <span>Corporation</span>
+            </div>
         </div>
 
-    </section>
 
-
-    <!-- ABOUT -->
-    <section class="about section" id="about">
-
-        <div class="about-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=85"
-                alt="Farmhouse"
-            >
-
+        <div class="menu-title">
+            MAIN MENU
         </div>
 
-        <div class="about-content">
 
-            <p class="section-label">
-                ABOUT US
-            </p>
+        <nav class="sidebar-menu">
 
-            <h2>
-                Your peaceful
-                countryside escape.
-            </h2>
-
-            <p>
-                Green Valley Farmhouse is a relaxing destination
-                where you can enjoy nature, fresh air and quality
-                time with your loved ones.
-            </p>
-
-            <p>
-                Perfect for families, friends, weekend trips,
-                celebrations and peaceful holidays.
-            </p>
-
-            <a href="#booking" class="button primary">
-                Plan Your Visit
+            <a href="#" class="active">
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
             </a>
 
-        </div>
+            <a href="#vehicles">
+                <i class="fa-solid fa-truck"></i>
+                Vehicles
+            </a>
 
-    </section>
+            <a href="#drivers">
+                <i class="fa-solid fa-id-card"></i>
+                Drivers
+            </a>
 
+            <a href="#maintenance">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Maintenance
+            </a>
 
-    <!-- FACILITIES -->
-    <section class="facilities section" id="facilities">
+            <a href="#documents">
+                <i class="fa-solid fa-file-lines"></i>
+                Documents
+            </a>
 
-        <div class="section-heading">
+            <a href="#fuel">
+                <i class="fa-solid fa-gas-pump"></i>
+                Fuel Management
+            </a>
 
-            <p class="section-label">
-                FACILITIES
-            </p>
+            <a href="#trips">
+                <i class="fa-solid fa-route"></i>
+                Trips
+            </a>
 
-            <h2>
-                Everything you need
-            </h2>
+            <a href="#reports">
+                <i class="fa-solid fa-chart-line"></i>
+                Reports
+            </a>
 
-            <p>
-                Enjoy a comfortable and memorable farmhouse experience.
-            </p>
-
-        </div>
-
-
-        <div class="facility-grid">
-
-            <div class="facility-card">
-                <div class="facility-icon">🏡</div>
-
-                <h3>
-                    Luxury Rooms
-                </h3>
-
-                <p>
-                    Comfortable and beautiful rooms for a relaxing stay.
-                </p>
-            </div>
+        </nav>
 
 
-            <div class="facility-card">
-                <div class="facility-icon">🏊</div>
-
-                <h3>
-                    Swimming Pool
-                </h3>
-
-                <p>
-                    Relax and enjoy our private swimming pool.
-                </p>
-            </div>
-
-
-            <div class="facility-card">
-                <div class="facility-icon">🌴</div>
-
-                <h3>
-                    Green Garden
-                </h3>
-
-                <p>
-                    Enjoy peaceful gardens and beautiful natural surroundings.
-                </p>
-            </div>
-
-
-            <div class="facility-card">
-                <div class="facility-icon">🔥</div>
-
-                <h3>
-                    Campfire
-                </h3>
-
-                <p>
-                    Spend your evenings with friends around a warm campfire.
-                </p>
-            </div>
-
-
-            <div class="facility-card">
-                <div class="facility-icon">🍽️</div>
-
-                <h3>
-                    Traditional Food
-                </h3>
-
-                <p>
-                    Enjoy delicious local and traditional farmhouse food.
-                </p>
-            </div>
-
-
-            <div class="facility-card">
-                <div class="facility-icon">🚗</div>
-
-                <h3>
-                    Free Parking
-                </h3>
-
-                <p>
-                    Safe and convenient parking for all our guests.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GALLERY -->
-    <section class="gallery section" id="gallery">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                GALLERY
-            </p>
-
-            <h2>
-                Experience Green Valley
-            </h2>
-
+        <div class="menu-title">
+            SYSTEM
         </div>
 
 
-        <div class="gallery-grid">
+        <nav class="sidebar-menu">
 
-            <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=85"
-                alt="Farmhouse exterior"
-            >
+            <a href="#">
+                <i class="fa-solid fa-bell"></i>
+                Alerts
+                <span class="notification">4</span>
+            </a>
 
-            <img
-                src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=1200&q=85"
-                alt="Farmhouse interior"
-            >
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
 
-            <img
-                src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1200&q=85"
-                alt="Nature"
-            >
+        </nav>
 
-            <img
-                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85"
-                alt="Swimming pool"
-            >
+
+        <div class="sidebar-bottom">
+
+            <div class="user-avatar">
+                AD
+            </div>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>Fleet Manager</small>
+            </div>
+
+            <i class="fa-solid fa-ellipsis"></i>
 
         </div>
 
-    </section>
+    </aside>
 
 
-    <!-- BOOKING -->
-    <section class="booking section" id="booking">
+    <!-- MAIN -->
 
-        <div class="booking-container">
+    <main class="main">
 
-            <div class="section-heading">
+        <!-- TOPBAR -->
 
-                <p class="section-label">
-                    BOOK YOUR STAY
-                </p>
+        <header class="topbar">
 
-                <h2>
-                    Plan your getaway
-                </h2>
+            <div>
+                <h1>Fleet Dashboard</h1>
+                <p>Welcome back, Administrator</p>
+            </div>
 
-                <p>
-                    Send us your details and we'll contact you.
-                </p>
+
+            <div class="top-actions">
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search vehicles..."
+                    >
+                </div>
+
+
+                <button class="icon-button">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+
+                <button class="profile">
+                    <div class="profile-avatar">
+                        AD
+                    </div>
+
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Corporation</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+
+                <div>
+                    <span>Total Vehicles</span>
+                    <h2>128</h2>
+                    <small class="positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        6 this month
+                    </small>
+                </div>
 
             </div>
 
 
-            <form id="bookingForm">
+            <div class="stat-card">
 
-                <div class="form-row">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <span>Active Vehicles</span>
+                    <h2>94</h2>
+                    <small class="positive">
+                        73.4% of fleet
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+
+                <div>
+                    <span>Under Maintenance</span>
+                    <h2>12</h2>
+                    <small class="warning">
+                        4 urgent
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-file-circle-exclamation"></i>
+                </div>
+
+                <div>
+                    <span>Documents Expiring</span>
+                    <h2>7</h2>
+                    <small class="danger">
+                        Next 30 days
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+            <!-- VEHICLE OVERVIEW -->
+
+            <div class="panel large-panel" id="vehicles">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Vehicle Overview</h2>
+                        <p>Current fleet status</p>
+                    </div>
+
+                    <button
+                        class="add-button"
+                        onclick="openVehicleModal()"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Vehicle
+                    </button>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button class="filter active">
+                        All <span>128</span>
+                    </button>
+
+                    <button class="filter">
+                        Active <span>94</span>
+                    </button>
+
+                    <button class="filter">
+                        Maintenance <span>12</span>
+                    </button>
+
+                    <button class="filter">
+                        Inactive <span>22</span>
+                    </button>
+
+                </div>
+
+
+                <div class="vehicle-table">
+
+                    <div class="table-header">
+
+                        <span>Vehicle</span>
+                        <span>Registration</span>
+                        <span>Type</span>
+                        <span>Driver</span>
+                        <span>Status</span>
+                        <span>Action</span>
+
+                    </div>
+
+
+                    <div
+                        class="vehicle-row"
+                        data-search="KL11AB1234 Ashok Leyland Ravi Kumar"
+                    >
+
+                        <div class="vehicle-name">
+
+                            <div class="vehicle-picture">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <div>
+                                <strong>Ashok Leyland</strong>
+                                <small>2022 • Diesel</small>
+                            </div>
+
+                        </div>
+
+                        <strong>KL-11-AB-1234</strong>
+
+                        <span>Heavy Truck</span>
+
+                        <span>Ravi Kumar</span>
+
+                        <span class="status active-status">
+                            Active
+                        </span>
+
+                        <button
+                            class="view-button"
+                            onclick="showVehicle('KL-11-AB-1234')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="vehicle-row"
+                        data-search="KL11CD5678 Tata Ace Suresh"
+                    >
+
+                        <div class="vehicle-name">
+
+                            <div class="vehicle-picture green">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <div>
+                                <strong>Tata Ace</strong>
+                                <small>2021 • Diesel</small>
+                            </div>
+
+                        </div>
+
+                        <strong>KL-11-CD-5678</strong>
+
+                        <span>Mini Truck</span>
+
+                        <span>Suresh</span>
+
+                        <span class="status active-status">
+                            Active
+                        </span>
+
+                        <button
+                            class="view-button"
+                            onclick="showVehicle('KL-11-CD-5678')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="vehicle-row"
+                        data-search="KL11EF9012 Mahindra Bolero Manoj"
+                    >
+
+                        <div class="vehicle-name">
+
+                            <div class="vehicle-picture orange">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+
+                            <div>
+                                <strong>Mahindra Bolero</strong>
+                                <small>2020 • Diesel</small>
+                            </div>
+
+                        </div>
+
+                        <strong>KL-11-EF-9012</strong>
+
+                        <span>Utility</span>
+
+                        <span>Manoj</span>
+
+                        <span class="status maintenance-status">
+                            Maintenance
+                        </span>
+
+                        <button
+                            class="view-button"
+                            onclick="showVehicle('KL-11-EF-9012')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="vehicle-row"
+                        data-search="KL11GH3456 Tata Bus Ajith"
+                    >
+
+                        <div class="vehicle-name">
+
+                            <div class="vehicle-picture purple">
+                                <i class="fa-solid fa-bus"></i>
+                            </div>
+
+                            <div>
+                                <strong>Tata Bus</strong>
+                                <small>2019 • Diesel</small>
+                            </div>
+
+                        </div>
+
+                        <strong>KL-11-GH-3456</strong>
+
+                        <span>Bus</span>
+
+                        <span>Ajith</span>
+
+                        <span class="status inactive-status">
+                            Inactive
+                        </span>
+
+                        <button
+                            class="view-button"
+                            onclick="showVehicle('KL-11-GH-3456')"
+                        >
+                            View
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALERTS -->
+
+            <div class="panel alerts-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Important Alerts</h2>
+                        <p>Needs your attention</p>
+                    </div>
+
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+
+
+                <div class="alert">
+
+                    <div class="alert-icon red-alert">
+                        <i class="fa-solid fa-file-circle-xmark"></i>
+                    </div>
+
+                    <div>
+                        <strong>Insurance Expiring</strong>
+                        <p>KL-11-AB-1234</p>
+                        <small>Expires in 5 days</small>
+                    </div>
+
+                </div>
+
+
+                <div class="alert">
+
+                    <div class="alert-icon orange-alert">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <div>
+                        <strong>Service Due</strong>
+                        <p>KL-11-EF-9012</p>
+                        <small>Service due at 80,000 km</small>
+                    </div>
+
+                </div>
+
+
+                <div class="alert">
+
+                    <div class="alert-icon yellow-alert">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+
+                    <div>
+                        <strong>License Renewal</strong>
+                        <p>Driver: Suresh</p>
+                        <small>Expires in 12 days</small>
+                    </div>
+
+                </div>
+
+
+                <div class="alert">
+
+                    <div class="alert-icon blue-alert">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+
+                    <div>
+                        <strong>Fuel Alert</strong>
+                        <p>KL-11-CD-5678</p>
+                        <small>Unusual fuel usage detected</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Manage your fleet faster</p>
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <button onclick="openVehicleModal()">
+                    <i class="fa-solid fa-truck-medical"></i>
+                    <strong>Add Vehicle</strong>
+                    <small>Register new vehicle</small>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    <strong>Add Driver</strong>
+                    <small>Create driver profile</small>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <strong>Schedule Service</strong>
+                    <small>Plan maintenance</small>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                    <strong>Upload Document</strong>
+                    <small>Add vehicle documents</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYTICS -->
+
+        <section class="analytics-grid">
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Fleet Utilization</h2>
+                        <p>Vehicle usage this month</p>
+                    </div>
+
+                    <select>
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                        <option>Last 6 Months</option>
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="chart-bars">
+
+                        <div class="bar" style="height:45%">
+                            <span>Mon</span>
+                        </div>
+
+                        <div class="bar" style="height:65%">
+                            <span>Tue</span>
+                        </div>
+
+                        <div class="bar" style="height:55%">
+                            <span>Wed</span>
+                        </div>
+
+                        <div class="bar" style="height:80%">
+                            <span>Thu</span>
+                        </div>
+
+                        <div class="bar" style="height:70%">
+                            <span>Fri</span>
+                        </div>
+
+                        <div class="bar" style="height:90%">
+                            <span>Sat</span>
+                        </div>
+
+                        <div class="bar" style="height:60%">
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Vehicle Types</h2>
+                        <p>Fleet distribution</p>
+                    </div>
+
+                </div>
+
+
+                <div class="type-list">
+
+                    <div class="type-item">
+                        <span>
+                            <i class="fa-solid fa-truck"></i>
+                            Trucks
+                        </span>
+                        <strong>42</strong>
+                    </div>
+
+                    <div class="type-item">
+                        <span>
+                            <i class="fa-solid fa-bus"></i>
+                            Buses
+                        </span>
+                        <strong>28</strong>
+                    </div>
+
+                    <div class="type-item">
+                        <span>
+                            <i class="fa-solid fa-car"></i>
+                            Cars
+                        </span>
+                        <strong>31</strong>
+                    </div>
+
+                    <div class="type-item">
+                        <span>
+                            <i class="fa-solid fa-van-shuttle"></i>
+                            Vans
+                        </span>
+                        <strong>27</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ADD VEHICLE MODAL -->
+
+    <div
+        class="modal"
+        id="vehicleModal"
+    >
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <h2>Add New Vehicle</h2>
+                    <p>Enter vehicle information</p>
+                </div>
+
+                <button onclick="closeVehicleModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="vehicleForm">
+
+                <div class="form-grid">
 
                     <div class="input-group">
 
-                        <label>Name</label>
+                        <label>Vehicle Name</label>
 
                         <input
                             type="text"
-                            id="name"
-                            placeholder="Your name"
+                            id="vehicleName"
+                            placeholder="Example: Tata Truck"
                             required
                         >
 
@@ -301,29 +748,12 @@
 
                     <div class="input-group">
 
-                        <label>Phone</label>
+                        <label>Registration Number</label>
 
                         <input
-                            type="tel"
-                            id="phone"
-                            placeholder="Your phone number"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <div class="input-group">
-
-                        <label>Check-in</label>
-
-                        <input
-                            type="date"
-                            id="checkin"
+                            type="text"
+                            id="registration"
+                            placeholder="KL-11-XX-0000"
                             required
                         >
 
@@ -332,103 +762,269 @@
 
                     <div class="input-group">
 
-                        <label>Guests</label>
+                        <label>Vehicle Type</label>
+
+                        <select id="vehicleType">
+
+                            <option>Truck</option>
+                            <option>Bus</option>
+                            <option>Car</option>
+                            <option>Van</option>
+                            <option>Utility Vehicle</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Fuel Type</label>
+
+                        <select>
+
+                            <option>Diesel</option>
+                            <option>Petrol</option>
+                            <option>Electric</option>
+                            <option>CNG</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Manufacturing Year</label>
 
                         <input
                             type="number"
-                            id="guests"
-                            placeholder="Number of guests"
-                            min="1"
-                            required
+                            min="1990"
+                            max="2026"
+                            placeholder="2024"
                         >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Odometer</label>
+
+                        <input
+                            type="number"
+                            placeholder="Current KM"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Assigned Driver</label>
+
+                        <select>
+
+                            <option>Select Driver</option>
+                            <option>Ravi Kumar</option>
+                            <option>Suresh</option>
+                            <option>Manoj</option>
+                            <option>Ajith</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Department</label>
+
+                        <select>
+
+                            <option>Waste Management</option>
+                            <option>Public Works</option>
+                            <option>Water Supply</option>
+                            <option>Health</option>
+                            <option>General Administration</option>
+
+                        </select>
 
                     </div>
 
                 </div>
 
 
-                <div class="input-group">
+                <div class="modal-actions">
 
-                    <label>Message</label>
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        onclick="closeVehicleModal()"
+                    >
+                        Cancel
+                    </button>
 
-                    <textarea
-                        id="message"
-                        rows="5"
-                        placeholder="Tell us about your stay..."
-                    ></textarea>
+                    <button
+                        type="submit"
+                        class="add-button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Vehicle
+                    </button>
 
                 </div>
-
-
-                <button
-                    type="submit"
-                    class="button primary submit-button"
-                >
-                    Send Booking Request
-                </button>
 
             </form>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- CONTACT -->
-    <section class="contact section">
+    <!-- VEHICLE DETAILS MODAL -->
 
-        <div class="contact-container">
+    <div
+        class="modal"
+        id="detailsModal"
+    >
 
-            <div>
+        <div class="details-box">
 
-                <p class="section-label">
-                    CONTACT
-                </p>
+            <div class="details-top">
 
-                <h2>
-                    Let's make your
-                    stay special.
-                </h2>
+                <button onclick="closeDetails()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
 
             </div>
 
 
-            <div class="contact-details">
+            <div class="vehicle-profile">
 
-                <p>
-                    📍 Kerala, India
-                </p>
+                <div class="big-vehicle-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
 
-                <p>
-                    📞 +91 98765 43210
-                </p>
+                <div>
 
-                <p>
-                    ✉️ hello@greenvalley.com
-                </p>
+                    <span class="status active-status">
+                        Active
+                    </span>
+
+                    <h2 id="detailRegistration">
+                        KL-11-AB-1234
+                    </h2>
+
+                    <p>
+                        Ashok Leyland • Heavy Truck
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-stats">
+
+                <div>
+                    <span>Odometer</span>
+                    <strong>72,450 km</strong>
+                </div>
+
+                <div>
+                    <span>Fuel</span>
+                    <strong>Diesel</strong>
+                </div>
+
+                <div>
+                    <span>Year</span>
+                    <strong>2022</strong>
+                </div>
+
+                <div>
+                    <span>Driver</span>
+                    <strong>Ravi Kumar</strong>
+                </div>
+
+            </div>
+
+
+            <div class="detail-tabs">
+
+                <button class="tab active">
+                    Overview
+                </button>
+
+                <button class="tab">
+                    Documents
+                </button>
+
+                <button class="tab">
+                    Maintenance
+                </button>
+
+                <button class="tab">
+                    Fuel
+                </button>
+
+                <button class="tab">
+                    Trips
+                </button>
+
+            </div>
+
+
+            <div class="vehicle-details-content">
+
+                <h3>Vehicle Information</h3>
+
+                <div class="information-grid">
+
+                    <div>
+                        <span>Registration</span>
+                        <strong>KL-11-AB-1234</strong>
+                    </div>
+
+                    <div>
+                        <span>Engine Number</span>
+                        <strong>AL2022X4589</strong>
+                    </div>
+
+                    <div>
+                        <span>Chassis Number</span>
+                        <strong>MB1K23456789</strong>
+                    </div>
+
+                    <div>
+                        <span>Department</span>
+                        <strong>Public Works</strong>
+                    </div>
+
+                    <div>
+                        <span>Insurance</span>
+                        <strong class="valid">
+                            Valid
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Fitness Certificate</span>
+                        <strong class="valid">
+                            Valid
+                        </strong>
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- FOOTER -->
-    <footer>
-
-        <div class="logo">
-            Green<span>Valley</span>
-        </div>
-
-        <p>
-            © 2026 Green Valley Farmhouse
-        </p>
-
-    </footer>
-
-
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
